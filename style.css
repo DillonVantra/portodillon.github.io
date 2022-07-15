@@ -1,0 +1,27 @@
+:root {
+  --bg-prim: #81ff14;
+  --bg-sec: #e1fe8b;
+}
+
+body {
+  min-height: 2000px;
+}
+
+.jumbotron {
+  padding-top: 6rem;
+  background-image: url(img/laptop2.jpg);
+}
+
+#project {
+  padding-top: 6rem;
+  background-color: var(--bg-sec);
+}
+
+#contact,
+#about {
+  padding-top: 6rem;
+}
+
+footer {
+  background-color: var(--bg-prim);
+}
