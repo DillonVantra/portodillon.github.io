@@ -3,25 +3,38 @@
   --bg-sec: #e1fe8b;
 }
 
-body {
-  min-height: 2000px;
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
 }
 
-.jumbotron {
-  padding-top: 6rem;
-  background-image: url(img/laptop2.jpg);
+#text {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
-#project {
-  padding-top: 6rem;
-  background-color: var(--bg-sec);
+#profile-image {
+  animation: 3.5s ease 0.8s infinite up-and-down;
 }
 
-#contact,
-#about {
-  padding-top: 6rem;
-}
+@keyframes up-and-down {
+  0% {
+    transform: translateY(0);
+  }
 
-footer {
-  background-color: var(--bg-prim);
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
