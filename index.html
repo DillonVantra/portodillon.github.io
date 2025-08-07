@@ -15,16 +15,26 @@
 
 <body>
   <!-- padding of screen is 14em -->
+
   <nav>
-    <div>DILLON</div>
-    <ul>
+    <div><a href="#hero"></a>DILLON</div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-  <section class="hero">
+  <div>
+    <ul class="mobile-nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <section class="hero" id="hero">
     <div class="hero-content">
       <h2>Hi, I am</h2>
       <h1>Dillon Donovan</h1>
@@ -75,6 +85,18 @@
       <button type="submit">Send</button>
     </form>
   </section>
+
+  <script>
+    const hamburger = document.getElementsByClassName('hamburger')[0];
+    const navLinks = document.getElementsByClassName('mobile-nav-links')[0];
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+
+  </script>
+
 </body>
 
 </html>
