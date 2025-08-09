@@ -1,0 +1,93 @@
+@media screen and (max-width: 480px) {
+
+    /* navbar is turned into burger menu */
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 1em;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-nav-content {
+        display: flex;
+    }
+
+    /* .mobile-nav-links {
+        display: flex;
+        position: absolute;
+        transform: translateX(200px);
+        right: -300px;
+        top: 0;
+        width: 80%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--main-color);
+        color: black;
+        justify-content: center;
+        transition: right 0.3s ease-in-out;
+    } */
+
+    /* .mobile-nav-links.active {
+        right: 0;
+    } */
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 2em;
+    }
+
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 2em 1em 0 1em;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero h2 {
+        font-size: 1.2em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    .hero a {
+        display: none;
+        font-size: 0.8em;
+        padding: 0 10px;
+        height: 36px;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+        margin-top: 2em;
+    }
+
+    .about p,
+    .skills h2,
+    .portfolio h2,
+    .contact p {
+        font-size: 0.9em;
+    }
+
+    .skills div img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .portfolio img {
+        max-width: 100%;
+    }
+}
