@@ -17,6 +17,7 @@
 
     .mobile-nav-content {
         display: flex;
+        /* position: sticky; */
     }
 
     /* .mobile-nav-links {
@@ -47,7 +48,7 @@
     .hero {
         flex-direction: column;
         height: auto;
-        padding: 2em 1em 0 1em;
+        padding: 6em 1em 0 1em;
         text-align: center;
     }
 
@@ -65,14 +66,11 @@
 
     .hero a {
         display: none;
-        font-size: 0.8em;
-        padding: 0 10px;
-        height: 36px;
     }
 
     .hero-image img {
         max-width: 100%;
-        margin-top: 2em;
+        margin-top: 4em;
     }
 
     .about p,

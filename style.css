@@ -41,6 +41,7 @@ body {
 nav {
 	/* position: fixed; */
 	display: flex;
+	position: fixed;
 	width: 100%;
 	flex-direction: row;
 	/* background-color: #3e5f44; */
@@ -50,6 +51,12 @@ nav {
 	height: 4em;
 	justify-content: space-between;
 	align-items: center;
+	font-weight: bold;
+}
+
+nav div a {
+	text-decoration: none;
+	color: inherit;
 	font-weight: bold;
 }
 
@@ -74,11 +81,12 @@ nav {
 
 .mobile-nav-content {
 	display: none;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 0;
 	width: 80%;
 	height: 100vh;
+	color: white;
 	background-color: var(--main-color);
 	z-index: 9999;
 	transition: transform 0.3s ease;
@@ -92,11 +100,12 @@ nav {
 	transform: translateX(0);
 }
 
-.mobile-nav-content img {
+.mobile-nav-content > svg {
 	display: block;
 	position: absolute;
+	color: white;
 	top: 18px;
-	right: 12px;
+	right: 15px;
 	width: 28px;
 	height: auto;
 	object-fit: cover;
@@ -106,14 +115,16 @@ nav {
 .mobile-nav-links {
 	/* display: none; */
 	list-style: none;
+	width: 100%;
 }
 
 .mobile-nav-links li {
 	margin: 1em 0;
 	width: 100%;
 	height: 44px;
-	/* width: 100%; */
-	/* padding: 1em; */
+	display: inline-flex;
+	gap: 0.5em;
+	justify-content: center;
 }
 
 .mobile-nav-links li a {
@@ -121,11 +132,21 @@ nav {
 	justify-content: center;
 	align-items: center;
 	text-decoration: none;
-	color: black;
+	color: white;
 	font-weight: bold;
-	width: 100%;
-	height: 100%;
+	/* width: 100%;
+	height: 100%; */
 	box-sizing: border-box;
+	padding: 0 100;
+}
+
+.mobile-nav-links li a:hover {
+	background-color: #64896b;
+	transition: background-color 0.3s ease;
+}
+
+.mobile-nav-links li svg {
+	width: 22px;
 }
 
 nav ul li {
@@ -148,7 +169,7 @@ section {
 	align-items: center;
 	justify-content: space-between;
 	height: calc(100vh - 4em);
-	padding: 0 14em;
+	padding: 5em 14em 0 14em;
 	/* text-align: center; */
 }
 

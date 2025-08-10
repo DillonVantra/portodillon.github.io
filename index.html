@@ -1,112 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portofolio</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portofolio</title>
+    <!-- import Raleway font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- import Raleway font -->
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mobile.css" media="(max-width: 480px)" />
+  </head>
 
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="mobile.css" media="(max-width: 480px)" />
-</head>
+  <body>
+    <!-- padding of screen is 14em -->
+    <div class="mobile-nav">
+      <div class="mobile-nav-content">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z"
+            fill="#ffffff"
+          />
+        </svg>
+        <ul class="mobile-nav-links">
+          <li>
+            <a href="#about">
+              <!-- <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M22.7099 5.79421C22.4248 5.48211 20.2708 3.17995 17.3257 1.76499C15.8446 1.05339 14.1051 0.537489 12.2683 0.6601C10.5472 0.774986 8.81081 1.44662 7.19057 2.9142C5.13666 2.54192 3.55846 2.92677 2.49394 4.0217C1.40549 5.14125 1.09579 6.77376 1.06276 8.22731C1.02891 9.71678 1.28131 11.2428 1.53146 12.3725C1.65771 12.9426 1.78604 13.4235 1.88331 13.7634C1.93137 13.9314 1.97199 14.0654 2.00124 14.1594C2.08641 19.6088 6.53039 24 12 24C17.2352 24 21.5307 19.9771 21.964 14.8541L22.9867 6.66897C23.0214 6.39118 22.9533 6.06056 22.7099 5.79421ZM4.98994 7.37281C4.23662 8.0105 3.60174 8.76553 3.11347 9.62375C3.07254 9.17353 3.05213 8.71763 3.06224 8.27275C3.09171 6.9763 3.37576 5.98381 3.92793 5.41586C4.41282 4.91712 5.33908 4.51889 7.27096 4.97345C7.60807 5.05277 7.96222 4.95202 8.20711 4.70714C9.61269 3.30155 11.0443 2.74625 12.4015 2.65566C13.7846 2.56334 15.1726 2.94938 16.4596 3.56772C18.5886 4.59057 20.2808 6.17022 20.949 6.84591L20.6506 9.23458C20.1999 8.53573 19.6473 7.91228 19.0101 7.37281C17.1724 5.81727 14.6819 5.00003 12 5.00003C9.31814 5.00003 6.82756 5.81727 4.98994 7.37281ZM20 14C20 14.2189 19.9912 14.4358 19.974 14.6503L19.8864 15.351C19.2444 19.1259 15.9578 22 12 22C7.58172 22 4 18.4183 4 14C4 11.8084 4.87826 10.0877 6.28214 8.89932C7.70188 7.69751 9.7113 7.00003 12 7.00003C14.2887 7.00003 16.2981 7.69751 17.7179 8.89932C19.1217 10.0877 20 11.8084 20 14ZM8.03001 17.2426C7.87428 16.6196 8.36619 16.0003 9.00016 15.9998H15.0002C15.6333 16.0003 16.126 16.6172 15.9703 17.24C15.4525 18.9881 13.7854 20 12.0002 20C10.2834 20 8.46902 18.9986 8.03001 17.2426ZM16.5 12C16.5 12.8285 15.8284 13.5 15 13.5C14.1716 13.5 13.5 12.8285 13.5 12C13.5 11.1716 14.1716 10.5 15 10.5C15.8284 10.5 16.5 11.1716 16.5 12ZM9 13.5C9.82843 13.5 10.5 12.8285 10.5 12C10.5 11.1716 9.82843 10.5 9 10.5C8.17157 10.5 7.5 11.1716 7.5 12C7.5 12.8285 8.17157 13.5 9 13.5Z"
+                  fill="#fff"
+                />
+              </svg> -->
+              About</a
+            >
+          </li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
 
-<body>
-  <!-- padding of screen is 14em -->
-  <div class="mobile-nav">
-    <div class="mobile-nav-content">
-      <img src="img/close.svg" alt="">
-      <ul class="mobile-nav-links">
+    <nav>
+      <div><a href="#hero">DILLON</a></div>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+      <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-    </div>
-  </div>
+    </nav>
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <h2>Hi, I am</h2>
+        <h1>Dillon Donovan</h1>
+        <p>Website Developer</p>
+        <a href="#about">See More ></a>
+      </div>
+      <div class="hero-image">
+        <img src="img/mypic3.webp" />
+      </div>
+    </section>
+    <section class="about" id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a passionate web developer with a keen interest in creating dynamic
+        and responsive websites. My journey in web development has equipped me
+        with the skills to build user-friendly interfaces and robust back-end
+        systems.
+      </p>
+    </section>
+    <section class="skills" id="skills">
+      <h2>Skills</h2>
+      <!-- gunakan display flex -->
+      <div>
+        <div><img src="img/html5.png" alt="" /></div>
+        <div><img src="img/css3.svg" alt="" /></div>
+        <div><img src="img/javascript.png" alt="" /></div>
+        <div><img src="img/nodejs-600px.png" alt="" /></div>
+        <div><img src="img/tailwind-600px.png" alt="" /></div>
+        <div><img src="img/bootstrap-600px.png" alt="" /></div>
+        <div><img src="img/Python-400.png" alt="" /></div>
+      </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+      <h2>Portfolio</h2>
+      <img src="img/under-cons.png" alt="" />
+      <p>Sorry about this. Amazing projects are coming soon!</p>
+    </section>
+    <section class="contact" id="contact">
+      <h2>Contact Me</h2>
+      <p>
+        If you have any questions or would like to collaborate, feel free to
+        reach out!
+      </p>
+      <form
+        action="https://formsubmit.co/dillondonovanputra@gmail.com"
+        method="POST"
+      >
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
 
-  <nav>
-    <div><a href="#hero"></a>DILLON</div>
-    <div class="hamburger" id="hamburger">&#9776;</div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-  <section class="hero" id="hero">
-    <div class="hero-content">
-      <h2>Hi, I am</h2>
-      <h1>Dillon Donovan</h1>
-      <p>Website Developer</p>
-      <a href="#about">See More ></a>
-    </div>
-    <div class="hero-image">
-      <img src="img/mypic3.webp" />
-    </div>
-  </section>
-  <section class="about" id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a passionate web developer with a keen interest in creating dynamic and responsive websites. My journey in
-      web development has equipped me with the skills to build user-friendly interfaces and robust back-end systems.
-    </p>
-  </section>
-  <section class="skills" id="skills">
+        <!-- Optional hidden fields -->
+        <input type="hidden" name="_subject" value="New message from website" />
+        <input type="hidden" name="_captcha" value="false" />
+        <button type="submit">Send</button>
+      </form>
+    </section>
 
-    <h2>Skills</h2>
-    <!-- gunakan display flex -->
-    <div>
-      <div><img src="img/html5.png" alt=""></div>
-      <div><img src="img/css3.svg" alt=""></div>
-      <div><img src="img/javascript.png" alt=""></div>
-      <div><img src="img/nodejs-600px.png" alt=""></div>
-      <div><img src="img/tailwind-600px.png" alt=""></div>
-      <div><img src="img/bootstrap-600px.png" alt=""></div>
-      <div><img src="img/Python-400.png" alt=""></div>
-    </div>
-  </section>
-  <section class="portfolio" id="portfolio">
-    <h2>Portfolio</h2>
-    <img src="img/under-cons.png" alt="">
-    <p>Sorry about this. Amazing projects are coming soon!</p>
-  </section>
-  <section class="contact" id="contact">
-    <h2>Contact Me</h2>
-    <p>If you have any questions or would like to collaborate, feel free to reach out!</p>
-    <form action="https://formsubmit.co/dillondonovanputra@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
+    <script>
+      const hamburger = document.getElementsByClassName("hamburger")[0];
+      const navLinks = document.getElementsByClassName("mobile-nav-links")[0];
+      const navContent =
+        document.getElementsByClassName("mobile-nav-content")[0];
+      const closeIcon = document.querySelector(".mobile-nav-content svg");
 
-      <!-- Optional hidden fields -->
-      <input type="hidden" name="_subject" value="New message from website">
-      <input type="hidden" name="_captcha" value="false">
-      <button type="submit">Send</button>
-    </form>
-  </section>
+      hamburger.addEventListener("click", () => {
+        navContent.classList.toggle("active");
+      });
 
-  <script>
-    const hamburger = document.getElementsByClassName('hamburger')[0];
-    const navLinks = document.getElementsByClassName('mobile-nav-links')[0];
-    const navContent = document.getElementsByClassName('mobile-nav-content')[0];
-    const closeIcon = document.querySelector('.mobile-nav-content img');
-
-    hamburger.addEventListener('click', () => {
-      navContent.classList.toggle('active');
-    });
-
-    closeIcon.addEventListener('click', () => {
-      navContent.classList.remove('active');
-    });
-
-
-  </script>
-
-</body>
-
+      closeIcon.addEventListener("click", () => {
+        navContent.classList.remove("active");
+      });
+    </script>
+  </body>
 </html>
